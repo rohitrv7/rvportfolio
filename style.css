@@ -1,0 +1,456 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;900&display=swap');
+@font-face {
+    font-family: Poppins-bold;
+    src: url("./Poppins/Poppins-ExtraBold.ttf");
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+/* navbar */
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    margin: 0 7vw;
+    border-bottom: 1px solid #525252;
+}
+.navbar .brand{
+    font-weight: 500;
+    font-size: 2vw;
+}
+.navbar a{
+    color: #2c2c2c;
+    font-size: 1.3vw;
+    text-decoration: none;
+}
+.navbar .link a{
+    position: relative;
+    padding: .5vw 1.1vw;
+}
+.navbar .link a::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #414141;
+    transition: all .3s ease;
+    /* padding: 0 1.8vw; */
+}
+.navbar .link a:hover::after{
+    width: 100%;
+    height: 2px;
+}
+
+/* Home page */
+
+#home-page{
+    height: calc(100vh - 10vh);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: default;
+    position: relative;
+}
+#home-page .cursor{
+    position: fixed;
+    opacity: 0;
+    width:60px;
+    height: 60px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: all .2s linear;
+    mix-blend-mode: difference;
+    backdrop-filter: blur(2px);
+    background: #0000009b;
+}
+#home-page h1{
+    font-size: 8vmax;
+    color: #414141;
+    text-align: center;
+    font-weight: 800;
+    font-family: poppins-bold;
+}
+#home-page h4{
+    color: #2c2c2c;
+    font-size: 2vmax;
+    font-weight: 400;
+    text-align: center;
+}
+#home-page .stroke{
+    font-size: 8vmax;
+    color: transparent;
+    -webkit-text-stroke: 2px #343434;
+}
+.htbtn{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10vh;
+    z-index: 2;
+}
+.htbtn button{
+    padding: 10px 20px;
+    border-radius: 6px;
+    margin: 1rem;
+    outline: none;
+    font-weight: 500;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+    border: 1px solid #000;
+}
+.htbtn button:nth-child(2){
+    background: #fff;
+    color: #000;
+    border: 1px solid #000;
+}
+
+/* About Page */
+
+#about-page{
+    margin-top: 2vh;
+    height: 100%;
+    width: 100%;
+}
+#about-page h1{
+    text-align: center;
+    color: #000;
+    font-size: 3vw;
+    font-weight: 700;
+    position: relative;
+}
+#about-page h1::before{
+    content: 'About';
+    position: absolute;
+    top: -20px;
+    left: 40%;
+    color: transparent;
+    -webkit-text-stroke: 2px #7e7e7e;
+    font-size: 6vw;
+    font-weight: 700;
+    z-index: -1;
+}
+.about-content{
+    display: flex;
+    padding: 3vw 7vw;
+    justify-content: center;
+}
+.aboutborder{
+    display: flex;
+    align-content: space-between;
+    border: 1px solid #7e7e7e;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.about-content .card{
+    position: relative;
+    width: 50%;
+    padding: 2vw;
+}
+.about-content .socialicons{
+    margin-top: 4vh;
+}
+.about-content .socialicons ion-icon{
+    font-size: 2vw;
+    padding: 0 1vw;
+    color: #525252;
+}
+.about-content .card .namet{
+    position: relative;
+    margin-top: 30px;
+}
+.about-content .card .name{
+    position: relative;
+}
+.about-content .card .name::after{
+    content: '';
+    position: absolute;
+    top: 30%;
+    left: 120px;
+    width: 70px;
+    height: 2px;
+    background: #414141;
+}
+.about-content .cardimg{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+.cardimg img{
+    filter: grayscale(1);
+    height: 450px;
+}
+
+/* Skills page */
+
+.skill-page{
+    margin-top: 25px;
+    height: 100%;
+    width: 100%;
+}
+.skill-page h1{
+    text-align: center;
+    color: #000;
+    font-size: 3vw;
+    font-weight: 700;
+    position: relative;
+}
+.skill-page h1::before{
+    content: 'Skills';
+    position: absolute;
+    top: -20px;
+    left: 41%;
+    color: transparent;
+    -webkit-text-stroke: 2px #7e7e7e;
+    font-size: 6vw;
+    font-weight: 700;
+    z-index: -1;
+}
+.skill-page .skills{
+    margin-right: 7vw;
+    margin-left: 7vw;
+    margin-top: 20px;
+}
+.skills h2{
+    font-size: 2.5vw;
+    margin: 10px 0;
+    font-weight: 500;
+}
+.skill-page .skillcard{
+    display: grid;
+    gap: 50px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.skillcard .card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 10px;
+    scale: .98;
+    transition: all .2s ease;
+    border: 1px solid #2c2c2c;
+}
+.skillcard .card:hover{
+    scale: 1;
+}
+.skillcard .card h4{
+    font-size: 1.6vw;
+    font-weight: 400;
+}
+svg{
+    width: 100px;
+    height: 100px;
+}
+
+/* Project pagge */
+
+.project-page{
+    margin-top: 30px;
+    height: 100%;
+    width: 100%;
+}
+.project-page h1{
+    text-align: center;
+    color: #000;
+    font-size: 3vw;
+    font-weight: 700;
+    position: relative;
+}
+.project-page h1::before{
+    content: 'Projects';
+    position: absolute;
+    top: -20px;
+    left: 36%;
+    color: transparent;
+    -webkit-text-stroke: 2px #7e7e7e;
+    font-size: 6vw;
+    font-weight: 700;
+    z-index: -1;
+}
+.projectcards{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-right: 7vw;
+    margin-left: 7vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 40px;
+}
+.projectcards .card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 20px;
+    padding: 15px;
+    border: 1px solid #2c2c2c;
+}
+.projectcards .card img{
+    aspect-ratio: 4/4;
+    border-radius: 10px;
+    object-fit: cover;
+    height: 200px;
+}
+.projectcards .card h4{
+    margin-top: 5px;
+    text-align: center;
+    color: #343434;
+    font-weight: 500;
+    font-size: 1.3vw;
+}
+.projectcards .card .btn{
+    display: flex;
+    justify-content: space-around;
+}
+.projectcards .card .btn button{
+    padding: 5px 10px;
+    border-radius: 15px;
+    border: 1px solid #2c2c2c;
+    background: #fff;
+    outline: none;
+    cursor: pointer;
+    margin: 5px;
+    transition: all .4s ease;
+}
+.projectcards .card .btn button:nth-child(2){
+    background: #000;
+    color: #fff;
+    transition: all .4s ease;
+}
+.projectcards .card .btn button:hover{
+    background: #000;
+    color: #fff;
+}
+.projectcards .card .btn button:hover:nth-child(2){
+    background: #fff;
+    color: #000;
+}
+.thanks{
+    background: #e7e7e7;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.thanks h2{
+    font-size: 3vw;
+    color: #7e7e7e;
+
+}
+
+@media (max-width:1150px){
+    .projectcards .card img{
+        height: 100px;
+    }
+}
+@media (max-width:900px){
+    .projectcards .card img{
+        height: 80px;
+    }
+    .projectcards .card .btn{
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+@media (max-width:700px) {
+    .navbar{
+        height: 6vh;
+        margin: 0 5vw;
+    }
+    .navbar .brand{
+        font-weight: 500;
+        font-size: 5vw;
+    }
+    .navbar .link a{
+        font-size: 3vw;
+        position: relative;
+        padding: .4vw 1vw;
+    }
+    #home-page h1{
+        font-size: 5vmax;
+        color: #414141;
+        text-align: center;
+        font-weight: 700;
+        font-family: poppins-bold;
+    }
+    #home-page .stroke{
+        font-size: 5vmax;
+        color: transparent;
+        -webkit-text-stroke: 1px #000;
+    }
+    .about-content .card{
+        position: relative;
+        width: 100%;
+        padding: 2vw;
+    }
+    .aboutborder{
+        flex-wrap: wrap;
+    }
+    .about-content .cardimg{
+        display: none;
+    }
+    .about-content .card .name::after{
+        width: 40px;
+    }
+    .skill-page .skillcard{
+        gap: 50px;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .projectcards{
+        gap: 50px;
+        grid-template-columns: 1fr 1fr;
+    }
+    .projectcards .card img{
+        aspect-ratio: 4/4;
+        gap: 40px;
+        height: 140px;
+    }
+    
+}
+@media (max-width:550px){
+    .projectcards .card img{
+        height: 60px;
+    }
+}
+@media (max-width:525px) {
+    .skill-page .skillcard{
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .projectcards{
+        gap: 50px;
+        grid-template-columns: 1fr 1fr;
+    }
+    .projectcards .card img{
+        height: 70px;
+    }
+}
+@media (max-width:310px) {
+    .skill-page .skillcard{
+        grid-template-columns: 1fr;
+    }
+    .projectcards{
+        gap: 50px;
+        grid-template-columns: 1fr;
+    }
+    .projectcards .card img{
+        height: 100px;
+    }
+}
