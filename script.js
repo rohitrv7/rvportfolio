@@ -131,7 +131,7 @@ gsap.to(".skill-page .heading h1",{
         scrub:3
     }
 })
-gsap.to(".skills .skillcard .card,.skills h2",{
+gsap.to(".skills .skillcard .card, w.skills h2",{
     y:-50,
     opacity:0,
     duration:.7,
@@ -141,7 +141,7 @@ gsap.to(".skills .skillcard .card,.skills h2",{
         trigger:".skill-page",
         scroller:"#main",
         start:"top 15%",
-        end:"top -150%",
+        end:"top -150%",w
         scrub:3,
         pin:true
     }
