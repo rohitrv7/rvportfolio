@@ -141,7 +141,7 @@ gsap.to(".skills .skillcard .card, w.skills h2",{
         trigger:".skill-page",
         scroller:"#main",
         start:"top 15%",
-        end:"top -150%",w
+        end:"top -150%",
         scrub:3,
         pin:true
     }
